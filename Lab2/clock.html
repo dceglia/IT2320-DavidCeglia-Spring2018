@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button type="button" onclick="demo1">Display Date</button>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+    document.getElementById("demo1").innerHTML = Date();
+
+    var d = new Date("February 18, 2018 11:00:00");
+    document.getElementById("demo2").innerHTML = d;
+
+    var e = new Date(2018,2,18,11,0,0,0);
+    document.getElementById("demo3").innerHTML = e;
+</script>
+
+</body>
+</html>

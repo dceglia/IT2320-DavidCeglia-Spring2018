@@ -1,0 +1,82 @@
+
+
+<!-- function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+}
+function getRandomInts(num) {
+    var ints = [];
+    for (var i = 0; i < num; i++) {
+        ints.push(getRandomInt(1, 91));
+    }
+    return ints;
+} -->
+
+<!-- <html>
+<head>
+<title>Sorting an Array of Images</title>
+<script type = "text/javascript">
+
+var Numbers = [1 - 100];
+document.write (Numbers[ Math.floor( Math.random( ) * 100 ) ] );
+
+</script></head><body></body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<script>
+var scripts = new Array();
+scripts[0] = "PHP";
+scripts[1] = "ASP";
+scripts[2] = "JavaScript";
+scripts[3] = "HTML";
+
+for (i=0;i<scripts.length;i++)
+{
+    document.write(scripts[i] + "<br >");
+}
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+var qarray = new Array(99);
+var j = 0;
+var min = 1;
+var max = 99;
+
+while(j < qarray.length)
+{
+  var randnum = Math.floor(Math.random()*(max-min+1)+min);
+
+  var found = false;
+
+  for(var i = 0; i < qarray.length; i++)
+  {
+    if(qarray[i] == randnum)
+    {
+       found = true;
+       break;
+    }
+  }
+
+  if(!found)
+  {
+    qarray[j] = randnum;
+    document.write(qarray[j] + "<br />");
+    j++;
+  }
+}
+</script>
+
+</body>
+</html>
