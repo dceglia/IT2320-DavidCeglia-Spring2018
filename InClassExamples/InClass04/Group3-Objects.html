@@ -32,14 +32,22 @@
         restaurantName: "Tri-C Cafeteria!",
         streetAddr: "11000 West Pleasant Valley Road",
         city: "Parma",
+        state: "Ohio",
+        zip: "44130",
+        websiteURL: "www.tri-c.edu",
         fullAddress: function() {
-            // need to finish concatenating values
-            return this.restaurantName + ", " + this.streetAddr + ", " + this.city;
+            return this.restaurantName + ", " + this.streetAddr + ", " + this.city + ", " +
+            this.state + ", " + this.zip;
         },
         makeReservations: function() {
             // need to finish the output
             document.getElementById("restaurantOutput").innerHTML = "Thank you for " +
-                "making reservations at " + this.restaurantName;
+                "making reservations at " + this.restaurantName + "<br><br>" + 
+                "<b>Location:</b><br>" + this.fullAddress() + "<b>Time:</b><br>";
+        },
+        finishMeal: function() {
+            document.getElementById("restaurantOutput").innerHTML = "Thank you for dining at " + this.restaurantName + 
+            " Please " + "let us know how your meal was at " + this.websiteURL;
         }
     };
     </script>
@@ -47,7 +55,7 @@
 <body>
 <h1>Restaurant Reservations</h1>
 <input type="button" value="Make Reservations" onclick="restaurantObj.makeReservations()">
-<input type="button" value="Finish Meal" onclick=""><br><br>    
+<input type="button" value="Finish Meal" onclick="restaurantObj.finishMeal()"><br><br>    
 <span id="restaurantOutput"> </span>
 </body>
 </html> 
