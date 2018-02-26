@@ -16,34 +16,24 @@
     https://www.w3schools.com/js/js_events.asp
     https://thechamplord.wordpress.com/2014/07/04/using-javascript-window-onload-event-properly/
 -->
-<!-- <html>
+<html>
 <head>
     <style>
     body { font-size: 30px; }
     </style>
+    <script>
+    //window.onload = function(){
+    //    document.getElementById('textToChange').innerHTML = "The page just loaded.";
+    //}
+    function myFunc(){
+        document.getElementById('textToChange').innerHTML = "The page just loaded.";
+    }
+    window.onload = myFunc;
+    </script>
 </head>
 <body>
 
-<p>Original text.</p>
+<p id="textToChange">Original text.</p>
 
 </body>
-</html>  -->
-
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>This example demonstrates how to assign an "onload" event to an iframe element.</p>
-
-<iframe onload="myFunction()" src="/default.asp"></iframe>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-    document.getElementById("demo").innerHTML = "The page just loaded";
-}
-</script>
-
-</body>
-</html>
+</html> 
