@@ -29,6 +29,7 @@
     </style>
     <script>
     var restaurantObj = {
+        // object properties below
         restaurantName: "Tri-C Cafeteria!",
         streetAddr: "11000 West Pleasant Valley Road",
         city: "Parma",
@@ -43,7 +44,7 @@
             // need to finish the output
             document.getElementById("restaurantOutput").innerHTML = "Thank you for " +
                 "making reservations at " + this.restaurantName + "<br><br>" + 
-                "<b>Location:</b><br>" + this.fullAddress() + "<b>Time:</b><br>";
+                "<b>Location:</b><br>" + this.fullAddress() + "<b>Time:</b><br>" + Date();
         },
         finishMeal: function() {
             document.getElementById("restaurantOutput").innerHTML = "Thank you for dining at " + this.restaurantName + 

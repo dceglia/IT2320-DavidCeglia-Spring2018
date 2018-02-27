@@ -12,6 +12,7 @@
         var newAmount = document.getElementById('newAmount').value;
 
         // 1. Add the value of newAmount to the running total totalAmount. Tip: Use parseFloat()
+        totalAmount = parseFloat("newAmount");
 
     
         var itemDescription = document.getElementById('newItem').value;
@@ -24,18 +25,23 @@
         
         // Display items in element with id="listOfElements"
         document.getElementById('listOfItems').innerHTML = items;
+        document.getElementById('listOfElements').innerHTML = elements;     // ?????
 
         /// 3. Display totalAmount in element with id="totalAmountBeforeTax"
+
+        document.getElementById('totalAmountBeforeTax').innerHTML = amountBeforeTax;
 
         // 4. Calculate tax as 7% of total (totalAmount)
         var taxAmount = 0;
 
         // 5. Display tax in element with id="totalTax"
 
+        document.getElementById('totalTax').innerHTML = totalTax;
+
         // 6. Display totalAmount + tax in element with id="totalAfterTax"
 
         // 7. Display all currency values that are output to display 2 decimal places
-        //      Hint: use toFixed()
+        //      Hint: use toFixed().......      x.toFixed(2);           // returns 9.66
 
         
         document.getElementById('newItem').value = "";
