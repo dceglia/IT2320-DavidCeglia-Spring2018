@@ -8,14 +8,14 @@
 <body>
 
 <script>
-
+/* found solution
 var qarray = new Array(99);
 var j = 0;
 var min = 1;
 var max = 100;
 
 while(j < qarray.length) {
-  var randnum = Math.floor(Math.random()*(max-min+1)+min);
+  var randnum = Math.floor(Math.random()*100+1);
 
   var found = false;
 
@@ -32,40 +32,30 @@ while(j < qarray.length) {
     j++;
   }
 }
+  */
 </script>
-
-</body>
-</html>
-
-<!-- <html>
-<head>
-    // my initial attempts on my own
-</head>
-
-<title>Printing an Array of Numbers</title>
 <script type = "text/javascript">
 
-//arrayLength = array.length;
+    //arrayLength = array.length;
+    
+    var randomNumbers = [];
 
-Math.random
-
-for (i = 0: i < 99; i++)
-
-var numRand = Math.floor(Math.random() * 101);
-
-var array = [];
-    for (i = 0; i < array.length; i++) {
-
-        array[i];
-
+    // populate the array with random numbers
+    for (i = 0; i < 99; i++) {
+        randomNumbers.push(Math.floor(Math.random() * 101+1));
     }
 
-document.getElementById("demo").innerHTML = array;
+    var output = "";
 
-</script>
+    // for in each element, concatenate the random value to string output
+    for (var i in randomNumbers) {
+            output += randomNumbers[i] + "<br>";
+    }
 
-</body>
-</html> -->
+    // output the string "output"
+    document.writeln(output);
+    </script>
+
 
 
 

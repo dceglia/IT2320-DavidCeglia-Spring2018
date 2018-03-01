@@ -16,47 +16,37 @@
     https://www.w3schools.com/js/js_htmldom_css.asp
 -->
 
-<!-- <html>
+<html>
 <head>
     <style>
     body { font-size: 30px; }
     </style>
+    <script>
+    function changeColor(color) {
+        document.getElementById('exampleParagraph').style.color=color;
+    }
+    function changeToRed() {
+        document.getElementById('exampleParagraph').style.color='red';
+    }
+    function changeToGreen() {
+        document.getElementById('exampleParagraph').style.color='green';
+    }
+
+    </script>
 </head>
 <body>
 
-<p>Click the button to display the date.</p>
-
-<button onmouseover="displayDate()">The time is?</button>
-
-<button onmouseout="displayDate()">The time is?</button>
-
-<p id="demo"></p>
-
-</body>
-</html>  -->
-
-<!DOCTYPE html>
-<html>
-<body>
-
-<p>This example uses the HTML DOM to assign an "onmouseover" and "onmouseout" event to a h1 element.</p>
-
-<h1 id="demo">Mouse over me</h1>
-
-<script>
-document.getElementById("demo").onmouseover = function() {mouseOver()};
-document.getElementById("demo").onmouseout = function() {mouseOut()};
-
-function mouseOver() {
-    document.getElementById("demo").style.color = "green";
-}
-
-function mouseOut() {
-    document.getElementById("demo").style.color = "red";
-}
-</script>
+<!--<p id='exampleParagraph' onmouseover="changeColor('green')" onmouseout="changeColor('red')">
+    Click the button to display the date.
+</p>-->
+<p id='exampleParagraph' 
+    onmouseover="document.getElementById('exampleParagraph').style.color='green'" 
+    onmouseout="document.getElementById('exampleParagraph').style.color='red'">
+        Click the button to display the date.
+    </p>
 
 </body>
+<<<<<<< HEAD
 </html>
 
 <!-- function changeColor(color) {
@@ -80,3 +70,6 @@ function changeToRed(color) {
     </p> -->
 
 </body>
+=======
+</html> 
+>>>>>>> c16dafaa3b98fba1997c48301990f4fe5c5c2b51
