@@ -1,69 +1,27 @@
-
+<!DOCTYPE html>
 <html>
-<head>
-    <!-- found @ http://bucarotechelp.com/design/jseasy/87082801.asp
-    altered to return random numbers from 1-100
-    closest attempt to specs for Lab 3 -->
-</head>
-<body>
-
-<script>
-/* found solution
-var qarray = new Array(99);
-var j = 0;
-var min = 1;
-var max = 100;
-
-while(j < qarray.length) {
-  var randnum = Math.floor(Math.random()*100+1);
-
-  var found = false;
-
-  for(var i = 0; i < qarray.length; i++) {
-    if(qarray[i] == randnum) {
-       found = true;
-       break;
-    }
-  }
-
-  if(!found) {
-    qarray[j] = randnum;
-    document.write(qarray[j] + "<br />");
-    j++;
-  }
-}
-  */
-</script>
-<script type = "text/javascript">
-
-    //arrayLength = array.length;
+  <head>
+  </head>
+    <script type = "text/javascript">
     
     var randomNumbers = [];
 
     // populate the array with random numbers
     for (i = 0; i < 99; i++) {
-        randomNumbers.push(Math.floor(Math.random() * 101+1));
+      randomNumbers.push(Math.floor(Math.random() * 101+1));
     }
+
+    //document.writeln(randomNumbers)
 
     var output = "";
 
     // for in each element, concatenate the random value to string output
     for (var i in randomNumbers) {
-            output += randomNumbers[i] + "<br>";
+      output += randomNumbers[i] + "<br>";
     }
 
     // output the string "output"
     document.writeln(output);
     </script>
-
-
-
-
-<!-- for (var randomArray = [], i = 0; i < 100; ++i)  randomArray [i] = i; -->
-
-<!-- function randomSort(a, b) {
-    return( parseInt( Math.random()*100 ));
-}
-
-var print = new Array( 1, 2, 3, 4, 5 );
-alert( print.sort(randomSort).toString() ); -->
+</html>
+  
