@@ -4,7 +4,8 @@
 <head>
     <script>
     function setDemoHTML() {
-        document.getElementById('updateme').innerHTML = "hello world">
+        // Add text "hello, world!" to the paragraph with id=updateme
+        document.getElementById('updateme').innerHTML = "hello, world!";
     }
     </script>
 </head>
@@ -13,7 +14,6 @@
 <h2>Using getElementById</h2>
 
 <p id="updateme"></p>
-
+<input type="button" onclick="setDemoHTML()" value="Update updateme">
 </body>
 </html>
-
