@@ -12,7 +12,7 @@
         var newAmount = document.getElementById('newAmount').value;
 
         // 1. Add the value of newAmount to the running total totalAmount. Tip: Use parseFloat()
-        totalAmount = parseFloat("newAmount");
+        totalAmount = parseFloat(newAmount) + parseFloat(totalAmount);
 
     
         var itemDescription = document.getElementById('newItem').value;
@@ -20,25 +20,28 @@
 
         // 2. Concatenate the value of Item Description into the table. Change item to the value of itemDescription
         //items += "<tr><td>Item</td><td>$" + newAmount + "</td></tr>"
-        items += "<tr><td>item</td><td>$" + parseFloat(newAmount).toFixed(2) + "</td></tr>"
+        items += "<tr><td>" + itemDescription + "</td><td>$" + parseFloat(newAmount).toFixed(2) + "</td></tr>"
         items += "</table>";
         
         // Display items in element with id="listOfElements"
         document.getElementById('listOfItems').innerHTML = items;
-        document.getElementById('listOfElements').innerHTML = elements;     // ?????
+        // document.getElementById('listOfElements').innerHTML = elements;     // one or the other
 
         /// 3. Display totalAmount in element with id="totalAmountBeforeTax"
 
-        document.getElementById('totalAmountBeforeTax').innerHTML = amountBeforeTax;
+        document.getElementById('totalAmountBeforeTax').innerHTML = totalAmount.toFixed(2);
 
         // 4. Calculate tax as 7% of total (totalAmount)
         var taxAmount = 0;
+        taxAmount = totalAmount * .07;
 
         // 5. Display tax in element with id="totalTax"
 
-        document.getElementById('totalTax').innerHTML = totalTax;
+        document.getElementById('totalTax').innerHTML = taxAmount.toFixed(2);
 
         // 6. Display totalAmount + tax in element with id="totalAfterTax"
+
+        document.getElementById('totalAfterTax').innerHTML = (totalAmount + taxAmount).toFixed(2);
 
         // 7. Display all currency values that are output to display 2 decimal places
         //      Hint: use toFixed().......      x.toFixed(2);           // returns 9.66
