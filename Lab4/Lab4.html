@@ -9,28 +9,34 @@
 
     // 3. Replace the window.onload event with jQuery document(ready)
     //    https://www.w3schools.com/jquery/jquery_syntax.asp
-    window.onload = function() {
-        document.getElementById('newItem').focus();
-    }
+
+    $(document).ready(function() {
+        $("#newItem").focus();
+    });
 
     function openTab(tabName) {
         var i;
-        // 4. Change getElementsByClassName to the jQuery $ method
-        var x = document.getElementsByClassName("tab");
-        for (i = 0; i < x.length; i++) {
-            // 5. Change the following line style.display = "none" to hide()
-            //    https://www.w3schools.com/jquery/jquery_hide_show.asp
-           x[i].style.display = "none";  
-        }
 
-        // 6. Change the following line style.display = "block" to show()
-        https://www.w3schools.com/jquery/jquery_hide_show.asp
-        document.getElementById(tabName).style.display = "block";  
+        // 4. Change getElementsByClassName to the jQuery $ method
+
+        $(".tab").hide();
+        $("#" + tabName).show();
+
+
+        // for (i = 0; i < x.length; i++) {
+        //     // 5. Change the following line style.display = "none" to hide()
+        //     //    https://www.w3schools.com/jquery/jquery_hide_show.asp
+        //    x[i].style.display = "none";  
+        // }
+
+        // // 6. Change the following line style.display = "block" to show()
+        // https://www.w3schools.com/jquery/jquery_hide_show.asp
+        // document.getElementById(tabName).style.display = "block";  
     }
 
     function addItem() {
-        var newItem = document.getElementById('newItem').value;
-        var newAmount = parseFloat(document.getElementById('newAmount').value);
+        var newItem = $("#newItem").val();
+        var newAmount = parseFloat($("#newAmount").val());
         costs.push(newAmount);
         items.push(newItem);
 
@@ -51,12 +57,17 @@
         //    https://www.w3schools.com/jquery/jquery_dom_get.asp
         //    https://www.w3schools.com/jquery/jquery_dom_set.asp
         //    Example: $('#summary').html(itemsSummary);
-        document.getElementById('summary').innerHTML = itemsSummary;
-        document.getElementById('currentItems').innerHTML = itemsDisplay;
+
+        $("#summary").html(itemsSummary);
+        $("#currentItems").html(itemsDisplay);
+
         // 8. Change all .value properties to jQuery .val() get and set
-        document.getElementById('newItem').value = '';
-        document.getElementById('newAmount').value = '';
-        document.getElementById('newItem').focus();
+
+        $("button").click(function() {
+            $("#newItem").val();
+            $("#newAmount").val();
+            $("#newItem").focus();
+        });
     }
 
     </script>

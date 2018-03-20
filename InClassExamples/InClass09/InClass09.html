@@ -1,4 +1,4 @@
-
+<!-- 
 
 <html>
 <html>
@@ -29,6 +29,45 @@
     <p>This is a paragraph.</p>
     
     </body>
+    </html> -->
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    .siblings * { 
+        display: block;
+        border: 2px solid lightgrey;
+        color: lightgrey;
+        padding: 5px;
+        margin: 15px;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("div").not(".intro").css({"color": "red", "border": "2px solid red"});
+        // $("p").not(".intro").css("background-color", "yellow")
+    });
+    </script>
+    </head>
+    <body class="siblings">
+    
+    <div>div (parent)
+      <p class="intro">p</p>
+      <span>span</span>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>paragraph in the middle</p>
+      <h4>h4</h4>
+      <h5>h5</h5>
+      <h6>h6</h6>
+      <p class="closer">p</p>
+    </div>
+    
+    </body>
     </html>
 
+    <!-- 1.   select all children of div except h3
 
+    change when click on (this)  -->
