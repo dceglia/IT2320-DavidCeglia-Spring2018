@@ -30,4 +30,34 @@ Enter your favorite food <input id="favoriteFood" name="favoriteFood" type="text
 </form>
 
 </body>
+<script>
+
+    /////////////////////////////
+    //////////   1   ////////////
+
+    $('p').eq(1).css('background-color', 'yellow');
+
+    //////////////////////////////
+    //////////   2   /////////////
+
+    $('#favoriteForm').submit(function() {
+        if ($('#favoriteFood').val() === "") {
+            $('#favoriteFood').next().text('You must enter a favorite food');
+            return false;
+        }
+        else {
+            $('#favoriteFood').next().text("");
+            return true;
+        }
+    });
+
+    /////////////////////////////
+    //////////   3   ////////////
+
+    $('p:first').parent().children('h1').css('background-color', 'green');
+    
+    /////////////////////////////
+    /////////   END   ///////////
+
+</script>
 </html>
